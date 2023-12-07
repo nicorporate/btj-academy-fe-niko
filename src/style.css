@@ -1,0 +1,120 @@
+*, html{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
+    margin: 0;
+    /* width: 100%; */
+    box-sizing: border-box;
+}
+
+body{
+    /* display: flex; */
+    background-color: rgb(228, 228, 228);
+}
+h1{
+    background-color: rgb(91, 91, 238);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    color: rgb(252, 248, 240);
+    padding: 10px;
+    padding-bottom: 1rem;
+}
+
+.nav{
+    background-color: rgb(58, 58, 58);
+    text-align: center;
+    padding: 5px;
+}
+
+nav a{
+    text-decoration: none;
+    color: aliceblue;
+    margin: 5px;
+    background-color: rgb(58, 58, 58);
+}
+
+section{
+    height: 800px;
+}
+
+.flex-container{
+    /* background-color: rgb(161, 228, 248); */
+    /* padding: 15px; */
+    /* margin: 15px; */
+    /* border-radius: 5px; */
+    /* width: auto;
+    height: auto; */
+    width: 100%;
+    /* max-width: 2000px; */
+    /* margin: 10px auto; */
+    padding: 20px;
+}
+
+.flex-box{
+    /* width: 1850px; */
+    height: 760px;
+    background-color: rgb(255, 255, 255);
+    /* margin: auto; */
+    padding: 20px;
+    /* display: block; */
+}
+
+.isi-box{
+    background-color: rgb(231, 231, 231);
+    text-align: center;
+    /* position: relative; */
+    /* max-width; */
+    /* border: 1px solid; */
+    border-radius: 5px;
+    padding: 2rem 3rem;
+    justify-content: center;
+    align-items: center;
+    /* display: flex; */
+    margin-right: 600px;
+    margin-left: 600px;
+    /* width: 600px; */
+}
+
+.bawah-box{
+    text-align: center;
+}
+
+form label{
+    display: block;
+    padding: 5px;
+    /* background-color: aqua; */
+    text-align: start;
+    font-weight: 500;
+}
+form input{
+    width: 100%;
+    /* margin: 2px; */
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+}
+button{
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: rgb(91, 91, 238);
+    color: white;
+
+}
+
+section img{
+    height: 300px;
+    width: 400px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+footer{
+    background-color: rgb(58, 58, 58);
+    text-align: center;
+    color: aliceblue;
+    padding: 10px;
+}

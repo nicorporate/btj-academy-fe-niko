@@ -3,34 +3,60 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>btj academy</title>
+    <title>BTJ ACADEMY 2023</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1>Welcome</h1>
-    <a href="">Home</a>
-    <a href="about.html">About</a>
-    <h2>Welcome to Our Landing Page</h2>
-    <p>Please login to access other features.</p>
-    <div>
-      Username: <input type="username" placeholder="Enter your username" />
-    </div>
-    <div>
-      Password:
-      <input type="password" placeholder="Enter your password" />
-    </div>
+    <!-- Bagian Header -->
+    <!-- Bagian Navigation -->
+    <header>
+      <nav>
+        <h1>Welcome</h1>
+        <div class="nav">
+          <a href="#">Home</a>
+          <a href="about.html">About</a>
+        </div>
+      </nav>
+    </header>
 
-    <button>Login</button>
-    <div>
-      <img src="img.avif" alt="img" height="150px" width="200px" />
-    </div>
-    <div>
-      <p>
-        "The only limit to our realization of tomorrow will be out doubts of
-        today." - Franklin D. Roosevelt
-      </p>
-    </div>
-    <div>
-      <footer>&copy;2023 BTJ Academy</footer>
-    </div>
+
+    <!-- Bagian Login - Section -->
+    <section class="flex-container">
+      <div class="flex-box">
+        <h2>Welcome to Our Landing Page</h2>
+        <p>Please login to access other features.</p>
+        <div class="isi-box">
+          <form action="">
+            <label for="">Username:</label>
+            <input type="username" placeholder="Enter your username" /> 
+            <label for="">Password:</label>
+            <input type="password" placeholder="Enter your password" /> 
+          </form>
+          <button>Login</button> <br>
+
+        </div>
+        <div class="bawah-box">
+          <img src="img.avif" alt="img" height="150px" width="200px" /> <br>
+          <i>
+            "The only limit to our realization of tomorrow will be out doubts of
+            today." - Franklin D. Roosevelt
+          </i>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Bagian Quotes Article -->
+    <!-- <article class="content">
+      <div class="isi">
+
+      </div>
+    </article> -->
+
+    <!-- Bagian Footer  -->
+    <footer>
+      &copy;2023 BTJ Academy
+    </footer>
   </body>
 </html>
