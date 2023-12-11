@@ -1,95 +1,106 @@
-*, html{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding: 0;
+*{
     margin: 0;
-    /* width: 100%; */
-    box-sizing: border-box;
+    padding: 0;
+}
+
+html{
+    background-color: rgb(41, 29, 95);
 }
 
 body{
-    /* display: flex; */
-    background-color: rgb(228, 228, 228);
+    font-family: sans-serif;
+    overflow-x: hidden;
+    background-color: white;
+    margin: 50px;
+    border-radius: 25px;
 }
-h1{
-    background-color: rgb(91, 91, 238);
-    text-align: center;
+
+nav{
     display: flex;
-    justify-content: center;
-    color: rgb(252, 248, 240);
-    padding: 10px;
-    padding-bottom: 1rem;
+    background-color: white;
+    justify-content: space-between;
+    padding: 40px;
+    color: rgb(41, 29, 95);
+    border-radius: 25px;
+    padding-top: 60px;  
 }
 
-.nav{
-    background-color: rgb(58, 58, 58);
-    text-align: center;
-    padding: 5px;
+nav .logo{
+    display: flex;
+    letter-spacing: 1px;
+    font-weight: bolder;
 }
 
+nav img{
+    width: 80%;
+    height: 60px;
+}
+
+nav h1{
+    margin-top: 10px;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.navbar{
+    display: flex;
+    list-style: none; 
+    width: 7%;
+    background-color: white;
+    justify-content: space-between;
+
+}
 nav a{
     text-decoration: none;
-    color: aliceblue;
-    margin: 5px;
-    background-color: rgb(58, 58, 58);
+    color: rgb(41, 29, 95);
+    font-size: large;
 }
 
-section{
-    height: 800px;
+.navbar{
+    text-decoration: none;
+    font-size: 0.8em;
 }
 
-.flex-container{
-    /* background-color: rgb(161, 228, 248); */
-    /* padding: 15px; */
-    /* margin: 15px; */
-    /* border-radius: 5px; */
-    /* width: auto;
-    height: auto; */
-    width: 100%;
-    /* max-width: 2000px; */
-    /* margin: 10px auto; */
-    padding: 20px;
+.container{
+    display: flex;
+    border: 10px;
+    margin: 40px 50px;
+    color: rgb(41, 29, 95);
+    max-width: 120vw
+}
+.container div{
+    width: 50%;
 }
 
-.flex-box{
-    /* width: 1850px; */
-    height: 760px;
-    background-color: rgb(255, 255, 255);
-    /* margin: auto; */
-    padding: 20px;
-    /* display: block; */
+.left-content{
+    background-color: rgb(197, 204, 236);
+    padding: 100px;
+    border-radius: 25px;
 }
-
-.isi-box{
-    background-color: rgb(231, 231, 231);
+.left-content form{
     text-align: center;
-    /* position: relative; */
-    /* max-width; */
-    /* border: 1px solid; */
-    border-radius: 5px;
-    padding: 2rem 3rem;
-    justify-content: center;
-    align-items: center;
-    /* display: flex; */
-    margin-right: 600px;
-    margin-left: 600px;
-    /* width: 600px; */
+    flex-direction: column;
 }
 
-.bawah-box{
+.right-content{
     text-align: center;
+    padding: 100px;
+    background-color: white;
+    color:  rgb(41, 29, 95);
+    font-size: large;
 }
 
 form label{
     display: block;
     padding: 5px;
-    /* background-color: aqua; */
     text-align: start;
     font-weight: 500;
+    margin-top: 10px;
+    font-size: large;
 }
 form input{
     width: 100%;
-    /* margin: 2px; */
-    padding: 10px;
+    padding: 15px 0;
     border: none;
     outline: none;
     border-radius: 3px;
@@ -97,24 +108,56 @@ form input{
 button{
     margin-top: 20px;
     width: 100%;
-    padding: 10px;
+    padding: 15px;
     border: none;
     outline: none;
-    background-color: rgb(91, 91, 238);
+    background-color: rgb(41, 29, 95);
     color: white;
-
+    justify-content: center;
+    align-items: center;
+    font-size: large;
 }
 
 section img{
     height: 300px;
     width: 400px;
+    max-width: 100%;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
 footer{
-    background-color: rgb(58, 58, 58);
+    background-color: white;
     text-align: center;
-    color: aliceblue;
-    padding: 10px;
+    color: rgb(41, 29, 95);
+    padding: 40px;
+    border-radius: 25px;
+    font-size: large;
 }
+
+.container p{
+    margin: 20px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .right-content{
+        width: 50%;
+        margin-top: 20px;
+    }
+  }
+@media screen and (max-width: 576px) {
+    .container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .right-content{
+        width: 30%;
+        margin-top: 20px;
+    }
+  }
