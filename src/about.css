@@ -148,6 +148,9 @@ article .left-content{
     list-style-type: none;
 }
 
+.right-content-1{
+    /* margin: 50px 0 0 0; */
+}
 
 #motto{
     margin-top: 80px;
@@ -200,7 +203,3 @@ footer{
     }
   }
 
-  #rotating-image{
-    transition: transform 1s ease;
-    cursor: pointer;
-}

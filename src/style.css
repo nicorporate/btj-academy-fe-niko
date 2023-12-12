@@ -161,35 +161,3 @@ footer{
         margin-top: 20px;
     }
   }
-
-#rotating-image{
-    /* transform: rotate(360deg); */
-    transition: transform 1s ease;
-    cursor: pointer;
-}
-
-#showPassword{
-    margin: 10px 0;
-}
-
-.hidden {
-    display: none;
-}
-#capsLockInfo{
-    text-align: start;
-    margin: 15px 0;
-    color: orange;
-    
-}
-
-.left-content button{
-    cursor: pointer;
-}
-
-.errors{
-    color: red;
-}
-
-#errorMessage{
-    text-align: start;
-}
