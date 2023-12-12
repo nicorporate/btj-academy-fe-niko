@@ -10,7 +10,7 @@
 <body>
     <nav>
         <div class="logo">
-            <img src="img.avif" alt="img" height="50px" width="50px" /> <br>
+            <img id="rotating-image" onclick="rotateImage()" src="img.avif" alt="img" height="50px" width="50px" /> <br>
             <h1>Welcome</h1>
         </div>
         <div class="navbar">
@@ -24,12 +24,18 @@
                 <h2>Welcome to Our Landing Page</h2>
                 <p>Please login to access other features.</p>
               <form action="">
-                <label for="">Username:</label>
-                <input type="username" placeholder="    Enter your username" /> 
-                <label for="">Password:</label>
-                <input type="password" placeholder="    Enter your password" /> 
+                <label for="username">Username:</label>
+                <input type="text" id="username" placeholder="    Enter your username" /> 
+                <p id="errorMessage" class="errors"></p>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="    Enter your password" /> 
               </form>
-              <button>Login</button> <br>
+              <p id="errorMessage2" class="errors"></p>
+              <p id="validationResult" class="errors"></p>
+              <div id="capsLockInfo" class="hidden">WARNING! Caps Lock is ON.</div>
+              <input type="checkbox" id="showPassword" onchange="togglePassword()"> Show Password
+              <button onclick="validateLogin()">Login</button> <br>
+
             </div>
             <div class="right-content">
               <img src="img.avif" alt="img" height="150px" width="200px" /> <br>
@@ -43,5 +49,6 @@
     <footer>
         &copy; 2023 Landing Page
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
