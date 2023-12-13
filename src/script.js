@@ -1,5 +1,4 @@
 
-// Fungsi rotasi img
 let rotationDegree = 0;
 
 function rotateImage() {
@@ -60,6 +59,7 @@ function validatePasswordRegex() {
     let validationResult = '';
 
     validationResult += 'Password need to have at least ';
+
     const hasUppercase = /[A-Z]/.test(password);
     if (!hasUppercase && password.length >= 4) {
       validationResult += 'one uppercase, ';
@@ -76,7 +76,7 @@ function validatePasswordRegex() {
     if (!hasSymbol && password.length >= 4) {
       validationResult += 'one symbol.';
     }
-    if (password.length >=4 && validationResult === '') {
+    if (password.length >=4 && hasUppercase && hasLowercase && hasDigit && hasSymbol) {
       location.replace("about.html")
     }
     document.getElementById("validationResult").innerHTML = validationResult;
