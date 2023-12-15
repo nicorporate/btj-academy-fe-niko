@@ -25,3 +25,28 @@ $(document).ready(function () {
 
   $("#rotating-image").click(rotateImage);
 });
+
+$(document).ready(function () {
+  var options = {
+    strings: ["Niko Aji Nugroho", "I am Niko Aji Nugroho"],
+    typeSpeed: 75,
+    backSpeed: 75,
+    loop: true,
+  };
+
+  var typed = new Typed("#nama-niko", options);
+});
+
+$(document).ready(function () {
+  function showCardFromSide() {
+    $("#cards").animate(
+      {
+        marginTop: "100px",
+        opacity: 1,
+      },
+      5000
+    );
+  }
+  showCardFromSide("left-content");
+  showCardFromSide("right-content");
+});

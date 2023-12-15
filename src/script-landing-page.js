@@ -1,16 +1,3 @@
-// $(document).on("DOMContentLoaded", function () {
-//   const capsLockInfo = $("#capsLockInfo");
-
-//   function checkCapsLock(event) {
-//     capsLockInfo.css(
-//       "display",
-//       event.getModifierState("CapsLock") ? "block" : "none"
-//     );
-//   }
-
-//   $(document).on("keydown keyup", checkCapsLock);
-// });
-
 $(document).ready(function () {
   let rotationDegree = 0;
 
