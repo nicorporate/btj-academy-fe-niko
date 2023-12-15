@@ -1,54 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BTJ Academy 2023 - Landing Page</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+      integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <nav>
-        <div class="logo">
-            <img id="rotating-image" onclick="rotateImage()" src="img.avif" alt="img" height="50px" width="50px" /> <br>
-            <h1>Welcome</h1>
-        </div>
-        <div class="navbar">
-            <a href="landing-page.html">Home</a>
-            <a href="about.html">About</a>
-        </div>
+      <div class="logo">
+        <img
+          id="rotating-image"
+          onclick="rotateImage()"
+          src="img.avif"
+          alt="img"
+          height="50px"
+          width="50px"
+        />
+        <br />
+        <h1>Welcome</h1>
+      </div>
+      <div class="navbar">
+        <a href="landing-page.html">Home</a>
+        <a href="about.html">About</a>
+      </div>
     </nav>
     <section>
-        <div class="container">
-            <div class="left-content">
-                <h2>Welcome to Our Landing Page</h2>
-                <p>Please login to access other features.</p>
-              <form action="">
-                <label for="username">Username:</label>
-                <input type="text" id="username" placeholder="    Enter your username" /> 
-                <p id="errorMessage" class="errors"></p>
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="    Enter your password" /> 
-              </form>
-              <p id="errorMessage2" class="errors"></p>
-              <p id="validationResult" class="errors"></p>
-              <div id="capsLockInfo" class="hidden">WARNING! Caps Lock is ON.</div>
-              <input type="checkbox" id="showPassword" onchange="togglePassword()"> Show Password
-              <button onclick="validateLogin()">Login</button> <br>
-
-            </div>
-            <div class="right-content">
-              <img src="img.avif" alt="img" height="150px" width="200px" /> <br>
-              <i>
-                "The only limit to our realization of tomorrow will be out doubts of
-                today." - Franklin D. Roosevelt
-              </i>
-            </div>
+      <div class="container">
+        <div class="left-content">
+          <h2>Welcome to Our Landing Page</h2>
+          <p>Please login to access other features.</p>
+          <form id="loginForm" action="">
+            <label for="username">Username:</label>
+            <input
+              type="text"
+              id="username"
+              placeholder="    Enter your username"
+            />
+            <p id="errorMessage" class="errors"></p>
+            <label for="password">Password:</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="    Enter your password"
+            />
+          </form>
+          <p id="errorMessage2" class="errors"></p>
+          <p id="validationResult" class="errors"></p>
+          <div id="capsLockInfo" class="hidden">WARNING! Caps Lock is ON.</div>
+          <input
+            type="checkbox"
+            id="showPassword"
+            onchange="togglePassword()"
+          />
+          Show Password
+          <button id="loginForm" onclick="validateLogin()">Login</button>
+          <br />
         </div>
+        <div class="right-content">
+          <img src="img.avif" alt="img" height="150px" width="200px" /> <br />
+          <i>
+            "The only limit to our realization of tomorrow will be out doubts of
+            today." - Franklin D. Roosevelt
+          </i>
+        </div>
+      </div>
     </section>
-    <footer>
-        &copy; 2023 Landing Page
-    </footer>
-    <script src="script.js"></script>
-</body>
+    <footer>&copy; 2023 Landing Page</footer>
+    <script src="script-landing-page.js"></script>
+  </body>
 </html>
