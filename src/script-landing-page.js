@@ -52,6 +52,8 @@ $(document).ready(function () {
   }
 
   function validatePassword() {
+    const username = $("#username").val();
+    const usernameError = $("#errorMessage");
     const password = $("#password").val();
     const passwordError = $("#errorMessage2");
 
@@ -64,12 +66,36 @@ $(document).ready(function () {
     if (password.length > 1 && password.length < 4) {
       passwordError.html("Max 4 characters");
     }
+
+    if (usernameError.html() === "" && passwordError.html() === "") {
+      $.ajax({
+        url: "https://dummyjson.com/auth/login",
+        method: "POST",
+        contentType: "application/json",
+        data: JSON.stringify({
+          username: username,
+          password: password,
+        }),
+        statusCode: {
+          200: () => {
+            alert("Login Success!");
+            window.location.href = "about.html";
+          },
+        },
+        error: () => {
+          alert("Login Failed! username or password might be wrong");
+          username.val("");
+          password.val("");
+        },
+      });
+    }
   }
 
   $("#rotating-image").click(rotateImage);
   $("#showPassword").change(togglePassword);
   $("#username").blur(validateUsername);
   $("#password").blur(validatePassword);
+  $("#loginForm").submit(validateLogin);
   //   $("#loginform").submit(validateLogin);
 });
 
@@ -99,56 +125,16 @@ function validatePasswordRegex() {
     password.length >= 4 &&
     hasUppercase &&
     hasLowercase &&
-    hasDigit &&
-    hasSymbol
+    hasDigit
+    // hasSymbol
   ) {
-    location.replace("about.html");
+    // location.replace("about.html");
   }
   document.getElementById("validationResult").innerHTML = validationResult;
 }
-$("#loginForm").submit(function (event) {
-  validatePasswordRegex();
-  event.preventDefault();
-});
 
 function validateLogin() {
   // validateUsername();
   // validatePassword();
   validatePasswordRegex();
-
-  // If all validations pass, make an AJAX request to the fake API
-  if (
-    $("#errorMessage").html() === "" &&
-    $("#errorMessage2").html() === "" &&
-    $("#validationResult").html() === ""
-  ) {
-    const username = $("#username").val();
-    const password = $("#password").val();
-
-    $.ajax({
-      url: "https://dummyjson.com/docs/auth",
-      method: "POST",
-      data: {
-        username: username,
-        password: password,
-      },
-      success: function (data, status, xhr) {
-        if (xhr.status === 200) {
-          // Redirect to about page upon successful authentication
-          window.location.replace("about.html");
-        } else {
-          // Handle other responses if needed
-          console.error("Unexpected response:", xhr.status);
-        }
-      },
-      error: function (xhr, status, error) {
-        // Handle errors, e.g., display an error message
-        console.error("Error:", status, error);
-      },
-    });
-  }
-  $("#loginForm").submit(function (event) {
-    validateLogin();
-    event.preventDefault(); // Prevent the form from submitting
-  });
 }
